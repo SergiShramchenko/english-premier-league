@@ -1,0 +1,10 @@
+.progress {
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 0;
+  background-color: #707070;
+}
+
+.progress::-webkit-progress-value {
+  background-color: #474747;
+}

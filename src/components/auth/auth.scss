@@ -1,0 +1,22 @@
+.auth {
+  width: 17rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-family: 'Fira Sans', sans-serif;
+  letter-spacing: 0.5px;
+
+  &__action {
+    opacity: 0.6;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fcfcfc;
+    transition: 0.2s ease-in;
+
+    &:hover {
+      opacity: 1;
+      transition: 0.2s ease-out;
+    }
+  }
+}

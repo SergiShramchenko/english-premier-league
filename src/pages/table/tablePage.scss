@@ -1,0 +1,110 @@
+.table-options {
+  width: 100%;
+  height: 4rem;
+  //   border: solid 1px rgba(0, 0, 255, 0.288);
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page {
+  width: 11rem;
+  height: 4rem;
+  background-color: rgba(69, 176, 232, 0.15);
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__title {
+  opacity: 0.5;
+  font-size: 1.8rem;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.tours {
+  width: 80rem;
+  height: 3.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__timeline {
+    width: 100%;
+    height: 0.1rem;
+    background-color: rgba(112, 112, 122, 0.5);
+    display: flex;
+    align-items: center;
+
+    &__slick {
+      height: 3.4rem;
+      width: 1.2rem;
+      background-color: #645d5d;
+    }
+  }
+}
+
+// CONTENT //
+
+.content {
+  width: 117rem;
+  height: 46.9rem;
+  display: flex;
+  justify-content: center;
+  background-color: #272727;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+// CONTENT //
+
+table {
+  //   border: solid 1px blue;
+  width: 100rem;
+  font-family: 'Noto Sans', sans-serif;
+  border-collapse: collapse;
+}
+
+thead {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: rgba(252, 252, 252, 0.5);
+}
+
+th {
+  //   border: solid 1px rgba(255, 99, 71, 0.425);
+  font-weight: normal;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+tr {
+  // border: solid 3px tomato;
+}
+
+td {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+td {
+  //   border-bottom: 1px solid #efefef;
+  // height: 5.7rem;
+}
+
+.club-name {
+  text-align: left;
+  padding-left: 7rem;
+  //   width: 100%;
+}
+
+.target {
+  border-bottom: solid 1px rgb(46, 46, 46);
+  font-size: 2rem;
+}
