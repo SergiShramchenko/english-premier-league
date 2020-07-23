@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
@@ -24,10 +25,15 @@ module.exports = {
         loader: 'source-map-loader',
       },
       {
-        test: /\.css$/,
-        loader: 'css-loader',
+        test: /\.s[ac]ss|css$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
+    compress: true,
+    port: 3000,
   },
   plugins: [
     new HtmlWebpackPlugin({
