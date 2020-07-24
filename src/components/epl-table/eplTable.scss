@@ -1,0 +1,26 @@
+.content {
+  width: 117rem;
+  height: 46.9rem;
+  display: flex;
+  justify-content: center;
+  background-color: #272727;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.target {
+  border-bottom: solid 1px rgb(46, 46, 46);
+  font-size: 2rem;
+}
+
+// TABLE //
+
+table {
+  width: 100rem;
+  font-family: 'Noto Sans', sans-serif;
+  border-collapse: collapse;
+}
+
+// TABLE //
