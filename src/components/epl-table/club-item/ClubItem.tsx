@@ -1,13 +1,11 @@
 import React from 'react';
 
-import Spinner from '../../spinner/Spinner';
-
 import './clubItem.scss';
 
-export default (props) => (
+export default ({ stats }) => (
   <tbody>
-    {props.stats ? (
-      props.stats.map((data) =>
+    {stats &&
+      stats.map((data) =>
         data.table.map((el) => {
           return (
             <tr key={el.id}>
@@ -24,9 +22,6 @@ export default (props) => (
             </tr>
           );
         })
-      )
-    ) : (
-      <Spinner />
-    )}
+      )}
   </tbody>
 );

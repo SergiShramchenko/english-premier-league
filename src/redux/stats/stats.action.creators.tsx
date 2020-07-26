@@ -1,11 +1,20 @@
 import { getData } from './stats.actions';
+import { startLoading, stopLoading, setError } from '../ui/ui.actions';
 
-export const fetchData = () => async (dispatch) =>
-  await fetch(
-    process.env.PROXY_URL +
-      `${process.env.FOOTYSTAT_URL}${process.env.FOOTYSTAT_API_KEY}${process.env.EPL}`
-  )
-    .then((res) => res.json())
-    .then((res) => res.data.specific_tables)
-    .then((res) => dispatch(getData(res)))
-    .then((err) => console.log(err));
+const apiUrl =
+  process.env.PROXY_URL +
+  `${process.env.FOOTYSTAT_URL}${process.env.FOOTYSTAT_API_KEY}${process.env.EPL}`;
+
+export const fetchData = () => async (dispatch) => {
+  dispatch(startLoading());
+  try {
+    const res = await fetch(apiUrl);
+    const dataJSON = await res.json();
+    const table = await dataJSON.data;
+    const epl = await table.specific_tables;
+    dispatch(getData(epl));
+  } catch (error) {
+    dispatch(setError());
+  }
+  dispatch(stopLoading());
+};

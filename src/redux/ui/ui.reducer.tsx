@@ -1,13 +1,13 @@
-import { START_LOADING } from './ui.types';
+import { START_LOADING, STOP_LOADING, SET_ERROR } from './ui.types';
 
 export type initianStateType = {
   loading: boolean;
-  image: string;
+  error: boolean;
 };
 
 const initialState: initianStateType = {
-  loading: false,
-  image: 'red',
+  loading: true,
+  error: false,
 };
 
 export default (state = initialState, action: any): initianStateType => {
@@ -16,6 +16,16 @@ export default (state = initialState, action: any): initianStateType => {
       return {
         ...state,
         loading: true,
+      };
+    case STOP_LOADING:
+      return {
+        ...state,
+        loading: false,
+      };
+    case SET_ERROR:
+      return {
+        ...state,
+        error: true,
       };
     default:
       return state;
