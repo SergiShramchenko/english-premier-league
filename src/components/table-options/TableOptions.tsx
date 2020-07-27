@@ -1,12 +1,12 @@
 import React from 'react';
 
+import CurrentPage from '../current-page/CurrentPage';
+
 import './tableOptions.scss';
 
 export default () => (
   <div className='table-options'>
-    <div className='page'>
-      <span className='page__title'>table</span>
-    </div>
+    <CurrentPage page_name={'table'} />
     <div className='tours'>
       <div className='tours__timeline'>
         <div className='tours__timeline__slick'></div>

@@ -1,4 +1,4 @@
-import { getData } from './stats.actions';
+import { getData, clearData } from './stats.actions';
 import { startLoading, stopLoading, setError } from '../ui/ui.actions';
 
 const apiUrl =
@@ -18,3 +18,5 @@ export const fetchData = () => async (dispatch) => {
   }
   dispatch(stopLoading());
 };
+
+export const cleanUpData = () => clearData();

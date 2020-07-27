@@ -2,8 +2,11 @@
   font-family: 'Fira Sans', sans-serif;
   font-weight: normal;
   letter-spacing: 1px;
+  border: solid 1px rgb(66, 65, 65);
+  padding: 5rem;
+  border-radius: 3px;
 
-  span {
+  &__code {
     color: tomato;
   }
 }

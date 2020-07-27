@@ -1,0 +1,16 @@
+.club-info {
+  width: 232px;
+  height: 118px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: 'Noto Sans', sans-serif;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+
+  &:hover {
+    background-color: #222222;
+    transition: 0.25s ease-in;
+  }
+}

@@ -53,6 +53,7 @@ module.exports = () => {
       new webpack.DefinePlugin(envKeys),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src', 'index.html'),
+        title: 'EPL',
       }),
       new MiniCssExtractPlugin({
         filename: './src/index.css',

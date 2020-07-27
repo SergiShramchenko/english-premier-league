@@ -1,12 +1,10 @@
 import React from 'react';
 
-import './catchError.scss';
+import Error from '../error/Error';
 
 export default ({ isError, children }): any =>
   isError ? (
-    <h1 className='error-message'>
-      <span>ERROR!</span> Please try again later :(
-    </h1>
+    <Error name='' code='ERROR!' text='Sorry, something went wrong...' />
   ) : (
     { ...children }
   );
